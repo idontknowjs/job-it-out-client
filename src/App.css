@@ -7,23 +7,37 @@ body {
   background-color: "#fafafa"
 }
 
+.logo-font {
+  font-size: xx-large;
+  font-family: 'Caveat', cursive;
+  transform: rotate(-5deg);
+}
+
 .container {
   margin: 80px auto 0 auto;
   max-width: 1200px;
 }
 
 .nav-container {
-  margin: auto;
+  /* position: absolute; */
+  justify-content: space-between;
+  /* margin: auto; */
+  display: flex;
 }
 
 .nav-container svg {
   color: #fff;
 }
 
+.flex-home {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 a {
   text-decoration: none;
 }
 
-/* a:visited {
-  color: wheat;
-} */
+a:visited {
+  color: white;
+}

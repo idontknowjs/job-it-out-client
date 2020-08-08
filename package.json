@@ -41,7 +41,7 @@
     ]
   },
 
-
+  "proxy": "https://us-central1-social-media-app-132cc.cloudfunctions.net/api",
   "devDependencies": {
     "@types/react-router-dom": "^5.1.5"
   }

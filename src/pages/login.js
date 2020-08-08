@@ -64,7 +64,11 @@ class login extends Component {
 
     return (
       <Paper>
-        <Grid style={{ paddingBottom: "30px" }} container className={classes.form}>
+        <Grid
+          style={{ paddingBottom: "30px", marginTop: "100px" }}
+          container
+          className={classes.form}
+        >
           <Grid item sm />
           <Grid item sm>
             <img src={AppIcon} alt="monkey" className={classes.image} />
@@ -116,7 +120,10 @@ class login extends Component {
               </Button>
               <br />
               <small className="small">
-                Don't have an account ? Sign up <Link to="/signup">here</Link>
+                Don't have an account ? Sign up{" "}
+                <u style={{ color: "#F5DEB3" }}>
+                  <Link to="/signup">here</Link>
+                </u>
               </small>
             </form>
           </Grid>
