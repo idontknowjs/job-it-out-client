@@ -37,7 +37,7 @@ export default function (state = initialState, action) {
     case LOADING_USER:
       return {
         ...state,
-        loading: false
+        loading: true
       };
     case LIKE_SCREAM:
       return {

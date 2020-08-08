@@ -12,6 +12,7 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import AddIcon from "@material-ui/icons/Add";
 import CloseIcon from "@material-ui/icons/Close";
+import SendRoundedIcon from "@material-ui/icons/SendRounded";
 
 // Redux stuff
 import { connect } from "react-redux";
@@ -95,15 +96,16 @@ class PostScream extends Component {
               <TextField
                 name="body"
                 type="text"
-                label="Scream!!"
+                label="Scream it out"
                 multiline
                 rows="3"
-                placeholder="Scream at your fellow companion"
+                placeholder="Scream at your friends"
                 error={errors.body ? true : false}
                 helperText={errors.body}
                 className={classes.textField}
                 onChange={this.handleChange}
                 fullWidth
+                style={{ marginTop: "0px" }}
               />
               <Button
                 type="submit"
@@ -112,7 +114,7 @@ class PostScream extends Component {
                 className={classes.submitButton}
                 disabled={loading}
               >
-                Submit
+                <SendRoundedIcon />
                 {loading && (
                   <CircularProgress size={30} className={classes.progressSpinner} />
                 )}

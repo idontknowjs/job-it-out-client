@@ -25,6 +25,10 @@ import signup from "./pages/signup";
 import user from "./pages/user";
 import axios from "axios";
 
+//Proxy only works in developmemt so need to tell this
+axios.defaults.baseURL =
+  "https://us-central1-social-media-app-132cc.cloudfunctions.net/api";
+
 //If token is deleted while user is logged in (i.e. in state) app will 'break'
 const token = localStorage.FBIdToken;
 if (token) {
@@ -177,11 +181,6 @@ class App extends Component {
         dark: "#b22a00",
         contrastText: "#fff"
       }
-
-      //TODO: When dark mode then only otherwise ""
-      // background: {
-      //   default: "#fafafa" //#fafafa #212121
-      // }
     },
 
     // The object to be spreaded

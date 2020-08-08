@@ -2,9 +2,11 @@ import React, { Component, Fragment } from "react";
 import PropTypes from "prop-types";
 import withStyles from "@material-ui/core/styles/withStyles";
 import MyButton from "../../util/MyButton";
+
 // Redux stuff
 import { connect } from "react-redux";
 import { editUserDetails } from "../../redux/actions/userActions";
+
 // MUI Stuff
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
@@ -18,8 +20,8 @@ import EditIcon from "@material-ui/icons/Edit";
 const styles = (theme) => ({
   ...theme.spreadThis,
   button: {
-    float: "right",
-  },
+    float: "right"
+  }
 });
 
 class EditDetails extends Component {
@@ -27,14 +29,14 @@ class EditDetails extends Component {
     bio: "",
     website: "",
     location: "",
-    open: false,
+    open: false
   };
 
   mapUserDetailsToState = (credentials) => {
     this.setState({
       bio: credentials.bio ? credentials.bio : "",
       website: credentials.website ? credentials.website : "",
-      location: credentials.location ? credentials.location : "",
+      location: credentials.location ? credentials.location : ""
     });
   };
 
@@ -54,7 +56,7 @@ class EditDetails extends Component {
 
   handleChange = (event) => {
     this.setState({
-      [event.target.name]: event.target.value,
+      [event.target.name]: event.target.value
     });
   };
 
@@ -62,7 +64,7 @@ class EditDetails extends Component {
     const userDetails = {
       bio: this.state.bio,
       website: this.state.website,
-      location: this.state.location,
+      location: this.state.location
     };
     this.props.editUserDetails(userDetails);
     this.handleClose();
@@ -104,7 +106,7 @@ class EditDetails extends Component {
                 name="website"
                 type="text"
                 label="Website"
-                placeholder="Your personal/professinal website"
+                placeholder="Include complete link with https:// or http://"
                 className={classes.textField}
                 value={this.state.website}
                 onChange={this.handleChange}
@@ -138,11 +140,11 @@ class EditDetails extends Component {
 
 EditDetails.propTypes = {
   editUserDetails: PropTypes.func.isRequired,
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 const mapStateToProps = (state) => ({
-  credentials: state.user.credentials,
+  credentials: state.user.credentials
 });
 
 export default connect(mapStateToProps, { editUserDetails })(

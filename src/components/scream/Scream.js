@@ -7,6 +7,7 @@ import PropTypes from "prop-types";
 import MyButton from "../../util/MyButton";
 import DeleteScream from "./DeleteScream";
 import ScreamDialog from "./ScreamDialog";
+import LikeButton from "./LikeButton";
 
 // MUI Stuff
 import Card from "@material-ui/core/Card";
@@ -19,7 +20,6 @@ import ChatIcon from "@material-ui/icons/Chat";
 
 // Redux
 import { connect } from "react-redux";
-import LikeButton from "./LikeButton";
 
 const styles = {
   card: {

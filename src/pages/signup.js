@@ -29,6 +29,7 @@ class signup extends Component {
       password: "",
       confirmPassword: "",
       handle: "",
+      loading: false,
       errors: {}
     };
   }
@@ -101,14 +102,14 @@ class signup extends Component {
                 fullWidth
               />
               <TextField
-                id="confirPassword"
-                name="confirPassword"
-                type="confirPassword"
-                label="Password"
+                id="confirmPassword"
+                name="confirmPassword"
+                type="password"
+                label="Confirm Password"
                 className={classes.textField}
-                helperText={errors.confirPassword}
-                error={errors.confirPassword ? true : false}
-                value={this.state.confirPassword}
+                helperText={errors.confirmPassword}
+                error={errors.confirmPassword ? true : false}
+                value={this.state.confirmPassword}
                 onChange={this.handleChange}
                 fullWidth
               />
@@ -123,6 +124,7 @@ class signup extends Component {
                 value={this.state.handle}
                 onChange={this.handleChange}
                 fullWidth
+                autoComplete="off"
               />
               {errors.general && ( //from firebase (general)
                 <Typography variant="body2" className={classes.customError}>

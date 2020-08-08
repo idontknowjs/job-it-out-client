@@ -80,7 +80,7 @@ class Notifications extends Component {
                 variant="body1"
                 to={`/users/${not.recipient}/scream/${not.screamId}`}
               >
-                {not.sender} {verb} your scream {time}
+                {not.sender} {verb} your scream ({time})
               </Typography>
             </MenuItem>
           );
@@ -104,6 +104,7 @@ class Notifications extends Component {
           open={Boolean(anchorEl)}
           onClose={this.handleClose}
           onEntered={this.onMenuOpened}
+          style={{ top: "32px" }}
         >
           {notificationsMarkup}
         </Menu>

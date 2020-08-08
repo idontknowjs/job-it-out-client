@@ -10,7 +10,7 @@ body {
 .logo-font {
   font-size: xx-large;
   font-family: 'Caveat', cursive;
-  transform: rotate(-5deg);
+  transform: rotate(-3deg);
 }
 
 .container {
@@ -36,8 +36,10 @@ body {
 
 a {
   text-decoration: none;
-}
-
-a:visited {
   color: white;
 }
+
+/* So that it can be visible on both black as well as white */
+/* a:visited {
+  color: white;
+} */
