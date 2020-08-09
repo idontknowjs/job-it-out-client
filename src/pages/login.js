@@ -17,7 +17,10 @@ import { connect } from "react-redux";
 import { loginUser } from "../redux/actions/userActions";
 
 const styles = (theme) => ({
-  ...theme.spreadThis
+  ...theme.spreadThis,
+  linkColor: {
+    color: "white"
+  }
 });
 
 class login extends Component {
@@ -121,7 +124,7 @@ class login extends Component {
               <br />
               <small className="small">
                 Don't have an account ? Sign up{" "}
-                <u>
+                <u class={classes.linkColor}>
                   <Link to="/signup">here</Link>
                 </u>
               </small>

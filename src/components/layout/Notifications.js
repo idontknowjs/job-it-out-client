@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 import PropTypes from "prop-types";
+import withStyles from "@material-ui/core/styles/withStyles";
 
 // MUI stuff
 import Menu from "@material-ui/core/Menu";
@@ -20,6 +21,10 @@ import ChatIcon from "@material-ui/icons/Chat";
 // Redux
 import { connect } from "react-redux";
 import { markNotificationsRead } from "../../redux/actions/userActions";
+
+const styles = (theme) => ({
+  ...theme.pallete
+});
 
 class Notifications extends Component {
   state = {
@@ -75,8 +80,8 @@ class Notifications extends Component {
             <MenuItem key={not.createdAt} onClick={this.handleClose}>
               {icon}
               <Typography
+                color="primary"
                 component={Link}
-                color="initial"
                 variant="body1"
                 to={`/users/${not.recipient}/scream/${not.screamId}`}
               >
@@ -122,4 +127,6 @@ const mapStateToProps = (state) => ({
   notifications: state.user.notifications
 });
 
-export default connect(mapStateToProps, { markNotificationsRead })(Notifications);
+export default connect(mapStateToProps, { markNotificationsRead })(
+  withStyles(styles)(Notifications)
+);

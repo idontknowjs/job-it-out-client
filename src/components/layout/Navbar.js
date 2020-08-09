@@ -17,13 +17,18 @@ import Tooltip from "@material-ui/core/Tooltip";
 // Icons
 import HomeIcon from "@material-ui/icons/Home";
 
-const styles = (theme) => ({
-  ...theme.pallete
+const styles = () => ({
+  logoFontD: {
+    color: "white",
+    fontSize: "xx-large",
+    fontFamily: "Caveat" || "cursive",
+    transform: "rotate(-3deg)"
+  }
 });
 
 class Navbar extends Component {
   render() {
-    const { authenticated, darkMode, darkModeFunc } = this.props;
+    const { authenticated, darkMode, darkModeFunc, classes } = this.props;
     return (
       <div>
         {darkMode ? (
@@ -31,7 +36,9 @@ class Navbar extends Component {
             <Toolbar className="nav-container">
               {authenticated ? (
                 <Fragment>
-                  <div className="logo-font">Scream it Out</div>
+                  <Link to="/">
+                    <div className={classes.logoFontD}>Scream it Out</div>
+                  </Link>
                   <div className="flex-home">
                     <PostScream />
                     <Link to="/">
@@ -47,7 +54,9 @@ class Navbar extends Component {
                 </Fragment>
               ) : (
                 <Fragment>
-                  <div className="logo-font">Scream it Out</div>
+                  <Link to="/">
+                    <div className={classes.logoFontD}>Scream it Out</div>
+                  </Link>
                   <div className="flex-home">
                     <Button color="inherit" component={Link} to="/">
                       Home
@@ -71,7 +80,9 @@ class Navbar extends Component {
             <Toolbar className="nav-container">
               {authenticated ? (
                 <Fragment>
-                  <div className="logo-font">Scream it Out</div>
+                  <Link to="/">
+                    <div className={classes.logoFontD}>Scream it Out</div>
+                  </Link>
                   <div className="flex-home">
                     <PostScream />
                     <Link to="/">
@@ -87,7 +98,9 @@ class Navbar extends Component {
                 </Fragment>
               ) : (
                 <Fragment>
-                  <div className="logo-font">Scream it Out</div>
+                  <Link to="/">
+                    <div className={classes.logoFontD}>Scream it Out</div>
+                  </Link>
                   <div className="flex-home">
                     <Button color="inherit" component={Link} to="/">
                       Home

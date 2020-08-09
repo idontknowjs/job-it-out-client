@@ -34,6 +34,9 @@ const styles = {
   content: {
     padding: 25,
     objectFit: "cover"
+  },
+  "& a": {
+    color: "black"
   }
 };
 

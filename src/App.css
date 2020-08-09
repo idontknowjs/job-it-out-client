@@ -7,12 +7,6 @@ body {
   background-color: "#fafafa"
 }
 
-.logo-font {
-  font-size: xx-large;
-  font-family: 'Caveat', cursive;
-  transform: rotate(-3deg);
-}
-
 .container {
   margin: 80px auto 0 auto;
   max-width: 1200px;
@@ -36,7 +30,6 @@ body {
 
 a {
   text-decoration: none;
-  color: white;
 }
 
 /* So that it can be visible on both black as well as white */
