@@ -34,7 +34,7 @@ class Comments extends Component {
                 sm={12}
                 style={{
                   padding: 10,
-                  backgroundColor: "rgba(0,0,0,0.03)"
+                  backgroundColor: "rgba(0,0,0,0.09)"
                 }}
               >
                 <Grid container>

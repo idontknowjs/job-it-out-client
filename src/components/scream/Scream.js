@@ -23,20 +23,34 @@ import { connect } from "react-redux";
 
 const styles = {
   card: {
-    height: "160px",
+    // height: "200px",
     position: "relative",
     display: "flex",
     marginBottom: 20
   },
   image: {
-    minWidth: 200
+    minWidth: 200,
+    height: 180,
+    marginTop: "auto",
+    marginBottom: "auto",
+    marginLeft: "10px"
   },
   content: {
     padding: 25,
-    objectFit: "cover"
+    paddingBottom: 0,
+    objectFit: "cover",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between"
   },
   "& a": {
     color: "black"
+  },
+  description: {
+    paddingRight: "20px"
+  },
+  details: {
+    // display: "flex"
   }
 };
 
@@ -72,31 +86,37 @@ class Scream extends Component {
           title="Profile image"
           className={classes.image}
         />
-        <CardContent className={classes.content}>
-          <Typography
-            variant="h5"
-            component={Link}
-            to={`/users/${userHandle}`}
-            color="primary"
-          >
-            {userHandle}
-          </Typography>
-          {deleteButton}
-          <Typography variant="body2" color="textSecondary">
-            {dayjs(createdAt).fromNow()}
-          </Typography>
-          <Typography variant="body1">{body}</Typography>
-          <LikeButton screamId={screamId} />
-          <span>{likeCount} Likes</span>
-          <MyButton tip="Comments">
-            <ChatIcon color="primary" />
-          </MyButton>
-          <span>{commentCount} comments</span>
-          <ScreamDialog
-            screamId={screamId}
-            userHandle={userHandle}
-            openDialog={this.props.openDialog} //TODO:
-          />
+        <CardContent className={classes.content} style={{ paddingBottom: "12px" }}>
+          <div>
+            <Typography
+              variant="h5"
+              component={Link}
+              to={`/users/${userHandle}`}
+              color="primary"
+            >
+              {userHandle}
+            </Typography>
+            {deleteButton}
+            <Typography variant="body2" color="textSecondary">
+              {dayjs(createdAt).fromNow()}
+            </Typography>
+            <Typography className={classes.description} variant="body1">
+              {body}
+            </Typography>
+          </div>
+          <div className={classes.details}>
+            <LikeButton screamId={screamId} />
+            <span>{likeCount} Likes</span>
+            <MyButton tip="Comments">
+              <ChatIcon color="primary" />
+            </MyButton>
+            <span>{commentCount} comments</span>
+            <ScreamDialog
+              screamId={screamId}
+              userHandle={userHandle}
+              openDialog={this.props.openDialog} //TODO:
+            />
+          </div>
         </CardContent>
       </Card>
     );
