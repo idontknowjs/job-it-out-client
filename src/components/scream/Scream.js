@@ -17,6 +17,8 @@ import Typography from "@material-ui/core/Typography";
 
 // Icons
 import ChatIcon from "@material-ui/icons/Chat";
+import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
+import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
 
 // Redux
 import { connect } from "react-redux";
@@ -106,7 +108,7 @@ class Scream extends Component {
           </div>
           <div className={classes.details}>
             <LikeButton screamId={screamId} />
-            <span>{likeCount} Likes</span>
+            <span>{likeCount} Upvotes</span>
             <MyButton tip="Comments">
               <ChatIcon color="primary" />
             </MyButton>

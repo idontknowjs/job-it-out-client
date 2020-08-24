@@ -66,7 +66,7 @@ class Notifications extends Component {
     let notificationsMarkup =
       notifications && notifications.length > 0 ? (
         notifications.map((not) => {
-          const verb = not.type === "like" ? "liked" : "commented on";
+          const verb = not.type === "like" ? "upvoted" : "commented on";
           const time = dayjs(not.createdAt).fromNow();
           const iconColor = not.read ? "primary" : "secondary";
           const icon =
