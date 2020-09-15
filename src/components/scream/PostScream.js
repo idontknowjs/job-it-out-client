@@ -90,13 +90,13 @@ class PostScream extends Component {
           >
             <CloseIcon />
           </MyButton>
-          <DialogTitle>Post a new scream</DialogTitle>
+          <DialogTitle>Post a new job information</DialogTitle>
           <DialogContent>
             <form onSubmit={this.handleSubmit}>
               <TextField
                 name="body"
                 type="text"
-                label="Scream it out"
+                label="Job it out"
                 multiline
                 rows="3"
                 placeholder="Scream at your friends"

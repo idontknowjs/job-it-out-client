@@ -14,8 +14,8 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 
 const styles = (theme) => ({
   form: {
-    ...theme.spreadThis,
-  },
+    ...theme.spreadThis
+  }
 });
 
 class signup extends Component {
@@ -28,26 +28,26 @@ class signup extends Component {
       confirmPassword: "",
       handle: "",
       loading: false,
-      errors: {},
+      errors: {}
     };
   }
   handleSubmit = (event) => {
     event.preventDefault();
     this.setState({
-      loading: true,
+      loading: true
     });
     const newUserData = {
       email: this.state.email,
       password: this.state.password,
       confirmPassword: this.state.confirmPassword,
-      handle: this.state.handle,
+      handle: this.state.handle
     };
     axios
       .post("/signup", newUserData)
       .then((res) => {
         console.log(res.data);
         this.setState({
-          loading: false,
+          loading: false
         });
         this.props.history.push("/"); //FIXME:
         //This just pushes the state and Url , go to it
@@ -55,14 +55,14 @@ class signup extends Component {
       .catch((err) => {
         this.setState({
           errors: err.response.data,
-          loading: false,
+          loading: false
         });
       });
   };
 
   handleChange = (event) => {
     this.setState({
-      [event.target.name]: event.target.value,
+      [event.target.name]: event.target.value
       //This means if the handleChange is called by name of email then
     });
   };
@@ -160,7 +160,7 @@ class signup extends Component {
 
 // To confirm that the type we are getting is object
 signup.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(signup);

@@ -37,7 +37,7 @@ class Navbar extends Component {
               {authenticated ? (
                 <Fragment>
                   <Link to="/">
-                    <div className={classes.logoFontD}>Scream it Out</div>
+                    <div className={classes.logoFontD}>Job it Out</div>
                   </Link>
                   <div className="flex-home">
                     <PostScream />
@@ -55,7 +55,7 @@ class Navbar extends Component {
               ) : (
                 <Fragment>
                   <Link to="/">
-                    <div className={classes.logoFontD}>Scream it Out</div>
+                    <div className={classes.logoFontD}>Job it Out</div>
                   </Link>
                   <div className="flex-home">
                     <Button color="inherit" component={Link} to="/">
@@ -81,7 +81,7 @@ class Navbar extends Component {
               {authenticated ? (
                 <Fragment>
                   <Link to="/">
-                    <div className={classes.logoFontD}>Scream it Out</div>
+                    <div className={classes.logoFontD}>Job it Out</div>
                   </Link>
                   <div className="flex-home">
                     <PostScream />
@@ -99,7 +99,7 @@ class Navbar extends Component {
               ) : (
                 <Fragment>
                   <Link to="/">
-                    <div className={classes.logoFontD}>Scream it Out</div>
+                    <div className={classes.logoFontD}>Job it Out</div>
                   </Link>
                   <div className="flex-home">
                     <Button color="inherit" component={Link} to="/">

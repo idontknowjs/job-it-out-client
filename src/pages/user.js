@@ -49,7 +49,9 @@ class user extends Component {
       <ScreamSkeleton />
     ) : screams === null || screams.length === 0 ? (
       //TODO: Add graphics when there is no scream form the user
-      <p>No screams from {handle}</p>
+      <p style={{ margin: "auto", textAlign: "center" }}>
+        No jobs related information posted by {handle}
+      </p>
     ) : !screamIdParam ? (
       screams.map((scream) => <Scream key={scream.screamId} scream={scream} />)
     ) : (

@@ -144,7 +144,7 @@ class ScreamDialog extends Component {
           <Typography variant="body1">{body}</Typography>
 
           <LikeButton screamId={screamId} />
-          <span>{likeCount} likes</span>
+          <span>{likeCount} upvotes</span>
 
           <MyButton tip="comments">
             <ChatIcon color="primary" />

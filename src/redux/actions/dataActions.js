@@ -48,6 +48,7 @@ export const getScream = (screamId) => (dispatch) => {
     })
     .catch((err) => console.log(err));
 };
+
 // Like a scream
 export const likeScream = (screamId) => (dispatch) => {
   axios
